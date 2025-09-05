@@ -1,0 +1,100 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <span style="color: red;">h-</span>
+            <span style="color: blue;">Afya</span>
+            <div >
+                <button class="btnback" (click)="goBack()">
+                    ← Retour
+                </button>
+            </div>
+            <div class="titre">
+                <p>Vous être entrain de créer un nouveau compte</p>
+
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="example-form">
+                <h5>Informations personnelles</h5>
+                <label color="black">
+                    <input type="radio" name="gender" [(ngModel)]="selectedGender" value="Homme" />
+                    Homme
+                </label>
+                <label>
+                    <input type="radio" name="gender" [(ngModel)]="selectedGender" value="Femme" />
+                    Femme
+                </label>
+
+                <p>Genre sélectionné : {{ selectedGender }}</p>
+
+                <div>
+                    <h5>📷 Télécharger photo de profil du patient.jpg (5Mo max)</h5>
+                    <!-- <button >📷 Ajouter une photo</button> -->
+                    <input type="file" (change)="onFileSelected($event)" accept="image/*" capture="environment
+                    "/>
+                    
+                    <button type="button" (click)="onUpload">Upload</button>
+                    <span class="file-name">{{selectedFile?.name}}</span>
+                </div>
+                <mat-form-field >
+                    <mat-label class="label_prenom">Prénom1</mat-label>
+                    <input type="text" placeholder="Renseignez votre prénom1" name="prenom1" [(ngModel)]="prenom1">
+
+                </mat-form-field>
+                <mat-form-field color="accent" >
+                    <mat-label>
+                        Prénom2
+                    </mat-label>
+                    <input type="text" matInput placeholder="Renseignez votre prénom1" name="prenom2"
+                        [(ngModel)]="prenom2">
+
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>
+                        Nom1
+                    </mat-label>
+                    <input type="text" placeholder="Renseignez votre nom de famille1" name="nom1" [(ngModel)]="nom1">
+
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>
+                        Nom
+                    </mat-label>
+                    <input type="text" placeholder="Renseignez votre nom de famille2" name="nom2" [(ngModel)]="nom2">
+
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>
+                        Date de naissance
+                    </mat-label>
+                    <input input type="text" placeholder="Renseignez votre date de naissance au format dd/mm/yyyy"
+                        name="datedenaissance" [(ngModel)]="datedenaissance">
+
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>
+                        Adresse
+                    </mat-label>
+                    <input type="text" matInput placeholder="Renseignez votre quartier" name="adresse"
+                        [(ngModel)]="adresse">
+
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>
+                        Localisation GPS
+                    </mat-label>
+                    <input placeholder="Se localiser (facultatif)" name="location" [(ngModel)]="location">
+
+                </mat-form-field>
+                
+            </form>
+        </mat-card-content>
+        <mat-card-footer>
+                <div class="center">
+                    <button id="btn-suivant" mat-stroked-button (click)="creercompte()">Créer votre compte</button>
+                </div>
+                </mat-card-footer>
+
+    </mat-card>
+
+</div>

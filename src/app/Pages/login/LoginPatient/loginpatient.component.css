@@ -1,0 +1,60 @@
+.titre 
+{
+    border-bottom: 2px solid #0B6BA8 !important;
+}
+
+.titre p, h1
+{ 
+    text-align: center;
+    display: block;
+    color: blue;
+    align-items: center; 
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.container
+{display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+background-color: #b8b8b8;
+}
+mat-card
+{width: 90%;
+max-width: 800px;
+background-color: azure;}
+
+mat-card-header
+{display: block;
+text-align: center;}
+
+mat-form-field
+{width: 100%;}
+#btn-login
+{width: 20%;
+background-color: blue;
+align-items: center;
+display: flex;
+justify-content: center}
+
+mat-error
+{display: block;
+width: 100%;
+text-align: flex;
+font-size: smaller;}
+
+.btnback
+{display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: left;
+width: 10%}
+
+.btnback
+{ 
+border: none;
+  padding: 0;
+  background: none;
+}

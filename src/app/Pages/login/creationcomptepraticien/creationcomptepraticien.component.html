@@ -1,0 +1,49 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+        <span style="color: red;">h-</span>
+        <span style="color: blue;">Afya</span>
+        <div >
+        <button class="btnback" (click)="goBack()">
+         ←
+     </button>
+     </div>
+        <div class="titre">
+            <p>Vous être entrain de créer un nouveau compte</p>
+            <p>Assurez votre pratique en toute sérénité : munissez vous de votre preuve</p>
+            <p> d’inscription à l’ordre des médecins et votre autorisation d’exercice en libéral !</p>
+        </div>   
+        </mat-card-header>
+        <mat-card-content>
+            <form>
+                <mat-form-field>
+                    <mat-label>
+                    Identifiant
+                    </mat-label>
+                    <input matInput placeholder="Identifiant (numéro de téléphone ou adresse e-mail)" name="username" [(ngModel)]="username">
+
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>
+                    Mot de passe
+                    </mat-label>
+                    <input matInput placeholder="Mot de passe (8 caractères minimum dont 1 cractère spécial)" name="password" [(ngModel)]="password">
+
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>
+                    Mot de passe
+                    </mat-label>
+                    <input matInput placeholder="Reécrire le mot de passe identique au précédent" name="password" [(ngModel)]="password">
+
+                </mat-form-field>
+                <div class="center">
+                <button id="btn-suivant" mat-stroked-button (click)="suivant()">Suivant</button>
+                <button><a>Avez vous oublié votre mot de passe oublié ?</a></button>
+                </div>
+            </form>
+        </mat-card-content>
+
+    </mat-card>
+
+</div>

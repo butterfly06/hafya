@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+        <span style="color: red;">h-</span>
+        <span style="color: blue;">Afya</span>
+        <div class="titre">
+        <h1>Votre santé et bien-être est notre priorité!</h1>
+        <p>*Un parcours de santé complet intégrant les professionnels</p>
+
+        <p>*(Télé) Consulter* un professionnel de la santé 24h/24, 7j/7</p>
+        <p>* La téléconsultation est uniquement possible pour les professions médicales</p>
+</div>
+        </mat-card-header>
+        <mat-card-content>
+  
+<section>
+  <div class="patient-button-row">
+    <button matIconButton="elevated"  (click)="PatientConnexion()">Se connecter(Patient)</button>
+    <button  (click)="CreationComptePatient()"><a>Nouveau compte Patient</a></button>
+    </div><br />
+    <div  class="praticien-button-row">
+    <button matIconButton="elevated" (click)="PraticienConnexion()">Se connecter(Praticien)</button>
+    <button (click)="CreationComptePraticien()"><a>Nouveau compte Praticien</a></button>    
+    </div>
+    
+</section>
+
+        </mat-card-content>
+
+    </mat-card>
+
+</div>

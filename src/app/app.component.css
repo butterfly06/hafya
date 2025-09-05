@@ -1,0 +1,17 @@
+button
+{ 
+background-color: var(--mat-sys-surface);
+align-items:center;
+height: 50px;
+width: 15%;
+
+}
+/* button:hover{
+    background: var(--mat-sys-primary);
+  } */
+  button:active{
+    background: #0eb3ab;
+  }
+  body {
+    background-color: lightblue;
+  }

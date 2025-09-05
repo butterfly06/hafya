@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+        <span style="color: red;">h-</span>
+        <span style="color: blue;">Afya</span>
+        <div >
+        <button class="btnback" (click)="goBack()">
+         ←
+     </button>
+     </div>
+        <div class="titre">
+            <p>Compte praticien</p>
+            <p>Vous être entrain d’accéder à votre compte</p>
+        </div>   
+        </mat-card-header>
+        <mat-card-content>
+            <form>
+                <mat-form-field>
+                    <mat-label>
+                    Identifiant
+                    </mat-label>
+                    <input matInput placeholder="Identifiant (numéro de téléphone ou adresse e-mail)" name="username" [(ngModel)]="username">
+
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>
+                    Mot de passe
+                    </mat-label>
+                    <input matInput placeholder="Mot de passe" name="password" [(ngModel)]="password">
+
+                </mat-form-field>
+                <div class="center">
+                <button id="btn-login" mat-stroked-button (click)="login()">Valider </button>
+                <button  (click)="forgetPwd()"><a>Avez vous oublié votre mot de passe oublié ?</a></button>
+                </div>
+                <mat-error *ngIf="wrongCredentials"> Invalid credentials. Please try again ...</mat-error>
+            </form>
+        </mat-card-content>
+
+    </mat-card>
+
+</div>

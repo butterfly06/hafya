@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+//@use "./theme/custom-theme.scss" as theme;
+
+  html {
+    color-scheme: light dark;
+    @include mat.theme
+    ((
+       color: mat.$azure-palette,
+       typography: Roboto,
+       density: -2
+    ));
+  }
+html
+{ height: 100%; }
+
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%; 
+background-color: var(--mat-sys-backgroup);
+color: var(--mat-sys-background)}
+
