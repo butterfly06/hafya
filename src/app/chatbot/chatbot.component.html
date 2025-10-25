@@ -1,0 +1,11 @@
+<p>chatbot works!</p>
+<div class="chat-container">
+  <div *ngFor="let message of messages" [class]="message.role">
+    <strong>{{ message.role === 'user' ? 'You' : 'Bot' }}:</strong> {{ message.text }}
+  </div>
+
+  <div class="input-box">
+    <input [(ngModel)]="userInput" (keydown.enter)="sendMessage()" [disabled]="isLoading" />
+    <button (click)="sendMessage()" [disabled]="isLoading">Envoyer</button>
+  </div>
+</div>

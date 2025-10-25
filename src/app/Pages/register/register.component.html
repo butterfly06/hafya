@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="user.name" name="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="user.email" name="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password">
+  </mat-form-field>
+
+  <input type="file" (change)="onImageSelected($event)" />
+  <img *ngIf="user.image" [src]="user.image" width="200" />
+
+  <button mat-raised-button color="primary" type="submit">Register</button>
+</form>
+
+<p *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</p>

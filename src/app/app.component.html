@@ -4,3 +4,5 @@
 <button mat-stroked-button routerLink="patient" matTooltip="Info about the patient" aria-label="Button that displays a tooltip when focused or hovered over">Patient</button>
 <button mat-stroked-button routerLink="contact">CONTACTS</button> -->
 <router-outlet/>
+<!-- Conditionally show footer -->
+<app-footer *ngIf="showFooter"></app-footer>

@@ -1,0 +1,6 @@
+.error-message
+{display: block;
+width: 100%;
+text-align: flex;
+font-size: smaller;
+color: red}
