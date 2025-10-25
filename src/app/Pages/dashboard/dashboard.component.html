@@ -1,0 +1,74 @@
+<!-- Header -->
+<header>
+  <div class="title">h-Afya</div>
+  <div class="subtitle">Compte patient de Mr. {{ user1?.name }}</div>
+</header>
+
+<!-- Patient Image Upload -->
+<div class="patient-circle">
+  <img
+    [src]="user1?.image"
+    class="profile-image"
+  />
+</div>
+
+
+<!-- Main Action Buttons Grid -->
+<div class="grid">
+  <button>📅<br>Planning des rendez-vous</button>
+  <button>📝<br>Préparer la consultation</button>
+  <button>🏥<br>Condition médicale</button>
+  <button>💡<br>Conseils (Divers & Info)</button>
+</div>
+
+<!-- Search Input -->
+<div class="search-container">
+  <input type="text" placeholder="Écrire le nom, la spécialité, l’établissement, l’adresse ou l’acte médical..." class="search-input" />
+</div>
+
+<!-- Floating Help Button -->
+<div class="help-button" (click)="toggleChatbot()">
+  <div class="help-icon">💬</div>
+  <div class="help-label">Aide</div>
+</div>
+
+<!-- Footer Navigation -->
+<footer class="footer">
+  <nav>
+    <!-- <mat-chip-list> -->
+      <mat-chip>
+        <mat-icon>home</mat-icon>
+        Accueil
+      </mat-chip>
+      <mat-chip>
+        <mat-icon>notifications</mat-icon>
+        Notifications
+      </mat-chip>
+      <mat-chip>
+        <mat-icon>mail</mat-icon>
+        Messagerie
+      </mat-chip>
+<!-- </mat-chip-list> -->
+      <!-- Profile Menu Trigger -->
+      <button mat-button [matMenuTriggerFor]="profileMenu">
+        <mat-icon>account_circle</mat-icon>
+        Mon profil
+      </button>
+
+      <!-- Profile Dropdown Menu -->
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>person</mat-icon>
+          <span>Mon compte</span>
+        </button>
+        <button mat-menu-item>
+          <span>À propos</span>
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Déconnexion</span>
+        </button>
+      </mat-menu>
+    
+  </nav>
+</footer>

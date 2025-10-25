@@ -1,0 +1,73 @@
+{
+  "configVersion": 1,
+  "timestamp": 1761335044136,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "datasante",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.html",
+        "/main-VMUM2ZXJ.js",
+        "/polyfills-B6TNHZQ6.js",
+        "/styles-65VQ7WHS.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/Calendrier.png",
+        "/assets/conseil.png",
+        "/assets/default-avatar.png",
+        "/assets/eric.jpeg",
+        "/assets/eric.png",
+        "/assets/flèche.png",
+        "/assets/icons/logout.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/Calendrier.png": "be006bfd9713e02ef8d2f2aeebb6fc859121a3d5",
+    "/assets/conseil.png": "0bb042222f6f42686f370dfaebe316cfcb2071ca",
+    "/assets/default-avatar.png": "fcff662b6b52aa5e518994666275808892044144",
+    "/assets/eric.jpeg": "5479eddb17cd3d570e048e8f48ccd3f0af91c8b7",
+    "/assets/eric.png": "5479eddb17cd3d570e048e8f48ccd3f0af91c8b7",
+    "/assets/flèche.png": "84690c2bfc74274d769c4e47e04d2f4930f557fa",
+    "/assets/icons/logout.png": "81882a8cdaf4360847e4b1c152be6285481a0be0",
+    "/index.html": "8e8c55f6590c1eed72693cfb3d46559fb998e51c",
+    "/main-VMUM2ZXJ.js": "24a30c369caeb0e177155c761d273a6b8eda056d",
+    "/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
+    "/styles-65VQ7WHS.css": "6dc516a2a051df9a594eb690725259209c4a70f3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

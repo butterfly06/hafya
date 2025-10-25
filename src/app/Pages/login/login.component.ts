@@ -20,13 +20,13 @@ wrongCredentials= false;
 
 constructor(private router: Router) {}
 PatientConnexion() {
-  this.router.navigate(['/login/patient']);
+  this.router.navigate(['/loginpatient']);
 }
 PraticienConnexion() {
   this.router.navigate(['/login/praticien']);
 }
-CreationComptePatient() {
-  this.router.navigate(['/creationcomptepatient']);
+RegisterPatient() {
+  this.router.navigate(['/register']);
 }
 CreationComptePraticien() {
   this.router.navigate(['/creationcomptepraticien']);
