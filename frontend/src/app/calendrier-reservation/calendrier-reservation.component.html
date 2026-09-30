@@ -1,0 +1,72 @@
+<div class="calendar-container">
+
+  <!-- Sélection du praticien -->
+  <div class="header">
+    <label for="praticien">Praticien :</label>
+    <select id="praticien" [(ngModel)]="selectedPraticienId" (change)="loadCalendar()">
+      <option *ngFor="let p of praticiens" [value]="p.id">
+        {{ p.lastname}}
+      </option>
+    </select>
+  </div>
+
+  <!-- Navigation du mois -->
+  <div class="month-nav">
+    <button (click)="prevMonth()">&lt;</button>
+    <h2>{{ monthNames[currentMonth - 1] }} {{ currentYear }}</h2>
+    <button (click)="nextMonth()">&gt;</button>
+  </div>
+
+  <!-- Légende -->
+  <div class="legend">
+    <div class="legend-item reservable"></div> <span>Réservable</span>
+    <div class="legend-item reserved"></div> <span>Réservé</span>
+    <div class="legend-item nonCancelable"></div> <span>Non annulable</span>
+    <div class="legend-item nonReservable"></div> <span>Non réservable</span>
+  </div>
+
+  <!-- Grille du calendrier -->
+  <div class="week-days">
+    <div *ngFor="let day of weekDays">{{ day }}</div>
+  </div>
+
+  <div class="days">
+    <div *ngFor="let day of days"
+         class="day"
+         [ngClass]="getDayClass(day)"
+         (click)="onDayClick(day)">
+      <span>{{ day.date }}</span>
+
+      <!-- Bouton d'annulation -->
+      <button *ngIf="day.status === 'reserved'" class="cancel-btn" (click)="onCancel(day); $event.stopPropagation();">
+        ✕
+      </button>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="calendar-container">
+  <div class="calendar-header">
+    <h2>Calendrier de Dr. Sibi TAKAM</h2>
+    <p>Mai 2025</p>
+  </div>
+  <div class="calendar">
+    <div class="calendar-row">
+      <div class="calendar-cell" *ngFor="let day of [1, 2, 3, 4, 5, 6, 7]">
+        <div class="day-number">{{ day }}</div>
+        <div class="appointments">
+          <div
+  class="appointment"
+  *ngFor="let rdv of getRdvForDay(day, '05-2025')"
+  [style.backgroundColor]="getTypeColor(rdv.type)">
+</div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- Répétez pour chaque semaine du mois -->
+  </div>
+</div>

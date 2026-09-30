@@ -1,0 +1,68 @@
+.error-message
+{display: block;
+width: 100%;
+text-align: flex;
+font-size: smaller;
+color: red}
+
+.container
+{display: flex;
+justify-content: center;
+align-items: center;
+height: 200%;
+background-color: #b8b8b8;
+}
+mat-card
+{width: 200%;
+
+text-align: center;
+flex-direction: column;
+ display: flex;
+
+background-color: azure;}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #f7f9fb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+button {
+    margin-top: 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #0056b3;
+    }
+  }
+
+
+
+// input,
+// select,
+// button {
+//   width: 100%;              // 👈 each field takes full width of form
+//   padding: 0.5rem;
+//   border-radius: 5px;
+//   border: 1px solid #ccc;
+//   font-size: 1rem;
+// }
+
+h3, p, label
+{ color: black}

@@ -1,0 +1,10 @@
+
+CREATE TABLE IF NOT EXIST USERS {
+
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(100),
+    prenom VARCHAR(100),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    adresse VARCHAR(100),
+    created_at TIMESTAMP DEFAUT NOW()
+}

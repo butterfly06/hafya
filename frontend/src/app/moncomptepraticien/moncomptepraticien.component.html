@@ -1,0 +1,22 @@
+<div class="patient-info">
+  <!-- *ngIf="email; else noData" -->
+  <h2>Mon Compte</h2>
+  <p><strong>Prénom:</strong> {{ praticien?.prenom }}</p>
+  <p><strong>Nom:</strong> {{ praticien?.nom }}</p>
+  <p><strong>Email:</strong> {{ praticien?.email }}</p>
+  
+  <p><strong>Date de naissance:</strong> {{ praticien?.date_naissance | date:'dd-MM-yyyy'}}</p></div>
+  
+  <p>
+    <strong>est présent depuis  :</strong>
+  {{  (joursDepuis(praticien?.date_naissance | date:'yyyy-MM-dd')) }} jours depuis la naissance</p>
+  <p><strong>Telephone:</strong> {{ praticien?.telephone }}</p>
+
+
+<ng-template #noData>
+  <p>Aucune information patient disponible.</p>
+</ng-template>
+
+<div *ngIf="errorMessage" class="error-message">
+  <p>{{ errorMessage }}</p>
+</div>

@@ -1,0 +1,13 @@
+
+<mat-slide-toggle color="primary" (change)="toggleTheme()" [checked]="isDarkMode">
+  {{ isDarkMode ? '🌙 Mode Nuit' : '☀️ Mode Jour' }}
+</mat-slide-toggle>
+<header>
+  <!-- other header items -->
+  <app-notification-bell></app-notification-bell>
+</header>
+
+<router-outlet/>
+<!-- Conditionally show footer -->
+<!-- <app-footer *ngIf="showFooter"></app-footer> -->
+

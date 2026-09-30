@@ -1,0 +1,55 @@
+<div class="bell-icon" (click)="toggle()">
+  <span class="icon-container">
+    <mat-icon>notifications</mat-icon>
+
+    <!-- Unread badge -->
+    <span class="badge" *ngIf="(unreadCount$ | async) as count">
+      <span *ngIf="count > 0">{{ count }}</span>
+    </span>
+  </span>
+</div>
+
+<!-- DROPDOWN AS A MATERIAL CARD -->
+<mat-card class="notifications-dropdown" *ngIf="isOpen">
+
+  <mat-card-header>
+    <button class="btnback" (click)="goBack()">← Retour</button>
+  </mat-card-header>
+
+  <mat-card-title>Notifications</mat-card-title>
+
+  <mat-card-content>
+
+    <ng-container *ngFor="let noti of notifications$ | async">
+      <mat-card class="notif-item">
+
+        <strong>{{ noti.title }}</strong> {{ noti.message }}
+
+        <div class="time">
+          {{ noti.time | date:'dd/MM/yyyy' }} à {{ noti.time | date:'HH:mm' }}
+        </div>
+
+        <!-- VALID PLACE FOR ACTIONS -->
+        <mat-card-actions>
+          <button 
+            *ngIf="!noti.read" 
+            mat-button 
+            (click)="markAsRead(noti)">
+            Non Lu
+          </button>
+
+          <button class="delete-btn" mat-button color="red" (click)="delete(noti)">
+            Supprimer la notification
+          </button>
+        </mat-card-actions>
+
+      </mat-card>
+    </ng-container>
+
+    <p *ngIf="(notifications$ | async)?.length === 0" class="empty">
+      Aucune notification présente
+    </p>
+
+  </mat-card-content>
+
+</mat-card>

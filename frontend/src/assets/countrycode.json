@@ -1,0 +1,247 @@
+[
+  {
+    "iso2": "AF",
+    "name": "Afghanistan",
+    "dialCode": "+93"
+  },
+  {
+    "iso2": "AL",
+    "name": "Albania",
+    "dialCode": "+355"
+  },
+  {
+    "iso2": "DZ",
+    "name": "Algeria",
+    "dialCode": "+213"
+  },
+  {
+    "iso2": "AS",
+    "name": "American Samoa",
+    "dialCode": "+1-684"
+  },
+  {
+    "iso2": "AD",
+    "name": "Andorra",
+    "dialCode": "+376"
+  },
+  {
+    "iso2": "AO",
+    "name": "Angola",
+    "dialCode": "+244"
+  },
+  {
+    "iso2": "AI",
+    "name": "Anguilla",
+    "dialCode": "+1-264"
+  },
+  {
+    "iso2": "AQ",
+    "name": "Antarctica",
+    "dialCode": "+672"
+  },
+  {
+    "iso2": "AG",
+    "name": "Antigua and Barbuda",
+    "dialCode": "+1-268"
+  },
+  {
+    "iso2": "AR",
+    "name": "Argentina",
+    "dialCode": "+54"
+  },
+  {
+    "iso2": "AM",
+    "name": "Armenia",
+    "dialCode": "+374"
+  },
+  {
+    "iso2": "AW",
+    "name": "Aruba",
+    "dialCode": "+297"
+  },
+  {
+    "iso2": "AU",
+    "name": "Australia",
+    "dialCode": "+61"
+  },
+  {
+    "iso2": "AT",
+    "name": "Austria",
+    "dialCode": "+43"
+  },
+  {
+    "iso2": "AZ",
+    "name": "Azerbaijan",
+    "dialCode": "+994"
+  },
+  {
+    "iso2": "BS",
+    "name": "Bahamas",
+    "dialCode": "+1-242"
+  },
+  {
+    "iso2": "BH",
+    "name": "Bahrain",
+    "dialCode": "+973"
+  },
+  {
+    "iso2": "BD",
+    "name": "Bangladesh",
+    "dialCode": "+880"
+  },
+  {
+    "iso2": "BB",
+    "name": "Barbados",
+    "dialCode": "+1-246"
+  },
+  {
+    "iso2": "BY",
+    "name": "Belarus",
+    "dialCode": "+375"
+  },
+  {
+    "iso2": "BE",
+    "name": "Belgium",
+    "dialCode": "+32"
+  },
+  {
+    "iso2": "BZ",
+    "name": "Belize",
+    "dialCode": "+501"
+  },
+  {
+    "iso2": "BJ",
+    "name": "Benin",
+    "dialCode": "+229"
+  },
+  {
+    "iso2": "BM",
+    "name": "Bermuda",
+    "dialCode": "+1-441"
+  },
+  {
+    "iso2": "BT",
+    "name": "Bhutan",
+    "dialCode": "+975"
+  },
+  {
+    "iso2": "BO",
+    "name": "Bolivia",
+    "dialCode": "+591"
+  },
+  {
+    "iso2": "BA",
+    "name": "Bosnia and Herzegovina",
+    "dialCode": "+387"
+  },
+  {
+    "iso2": "BW",
+    "name": "Botswana",
+    "dialCode": "+267"
+  },
+  {
+    "iso2": "BR",
+    "name": "Brazil",
+    "dialCode": "+55"
+  },
+  {
+    "iso2": "IO",
+    "name": "British Indian Ocean Territory",
+    "dialCode": "+246"
+  },
+  {
+    "iso2": "VG",
+    "name": "British Virgin Islands",
+    "dialCode": "+1-284"
+  },
+  {
+    "iso2": "BN",
+    "name": "Brunei",
+    "dialCode": "+673"
+  },
+  {
+    "iso2": "BG",
+    "name": "Bulgaria",
+    "dialCode": "+359"
+  },
+  {
+    "iso2": "BF",
+    "name": "Burkina Faso",
+    "dialCode": "+226"
+  },
+  {
+    "iso2": "BI",
+    "name": "Burundi",
+    "dialCode": "+257"
+  },
+  {
+    "iso2": "KH",
+    "name": "Cambodia",
+    "dialCode": "+855"
+  },
+  {
+    "iso2": "CM",
+    "name": "Cameroon",
+    "dialCode": "+237"
+  },
+  {
+    "iso2": "CA",
+    "name": "Canada",
+    "dialCode": "+1"
+  },
+  {
+    "iso2": "CV",
+    "name": "Cape Verde",
+    "dialCode": "+238"
+  },
+  {
+    "iso2": "KY",
+    "name": "Cayman Islands",
+    "dialCode": "+1-345"
+  },
+  {
+    "iso2": "CF",
+    "name": "Central African Republic",
+    "dialCode": "+236"
+  },
+  {
+    "iso2": "TD",
+    "name": "Chad",
+    "dialCode": "+235"
+  },
+  {
+    "iso2": "CL",
+    "name": "Chile",
+    "dialCode": "+56"
+  },
+  {
+    "iso2": "CN",
+    "name": "China",
+    "dialCode": "+86"
+  },
+  {
+    "iso2": "CX",
+    "name": "Christmas Island",
+    "dialCode": "+61"
+  },
+  {
+    "iso2": "CC",
+    "name": "Cocos Islands",
+    "dialCode": "+61"
+  },
+  {
+    "iso2": "CO",
+    "name": "Colombia",
+    "dialCode": "+57"
+  },
+  {
+    "iso2": "KM",
+    "name": "Comoros",
+    "dialCode": "+269"
+  },
+  {
+    "iso2": "CG",
+    "name": "Congo",
+    "dialCode": "+242"
+  }
+]

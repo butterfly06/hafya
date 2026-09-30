@@ -1,0 +1,24 @@
+// src/theme/custom-theme.scss
+
+@import '@angular/material/theming';
+@use "@angular/material" as mat;
+// Include the common styles for Angular Material
+// Define your primary and accent palettes
+$primary-palette: mat-palette($red-palette);
+$accent-palette: mat-palette(#ba1a1a, A200, A100, A400);
+// Create the theme object with primary and accent colors
+$warn-palette: mat-palette(#93000a);
+
+//$warn-palette: mat-palette($mat-red);
+$custom-theme: mat-light-theme(
+  (
+    color: (
+      primary: $primary-palette,
+      accent: $accent-palette,
+      warn: $warn-palette,
+    ),
+  )
+);
+
+@include angular-material-theme($custom-theme);
+

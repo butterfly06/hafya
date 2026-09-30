@@ -1,0 +1,58 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <span style="color: red;">h-</span>
+            <span style="color: blue;">Afya</span>
+
+            <div>
+                <button class="btnback" (click)="goBack()">
+                    ← Retour
+                </button>
+            </div>
+            <div class="titre">
+                <p>Compte patient</p>
+                <p>Vous être entrain d’accéder à votre compte</p>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <form (ngSubmit)="login()" #loginForm="ngForm" name="loginForm">
+                <mat-form-field>
+                    
+                <input type="email" name="email" [(ngModel)]="email" placeholder="Email" required />
+                    
+                </mat-form-field>
+                <mat-form-field>
+                    
+                <input type="password" name="password" [(ngModel)]="password" placeholder="Password"
+                    required />
+                    
+                </mat-form-field>
+
+                
+        
+            <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+                <button type="submit">Login</button>
+                <!-- <button  routerLink="/forgotpwd"><a>Avez vous oublié votre mot de passe oublié ?</a></button> -->
+                
+                <!-- (click)="forgetPwd() -->
+           
+            </form>
+            <button   (click)="forgetPwd()" ><a>Avez vous oublié votre mot de passe oublié ?</a></button>
+          <!-- 2FA Section -->
+      <div *ngIf="needs2FA">
+        <p>{{ message }}</p>
+
+        <!-- Affiche QR code uniquement si il y a qrCode (première configuration) -->
+        <img *ngIf="qrCode" [src]="qrCode" alt="QR Code" />
+
+        <!-- Champ OTP toujours affiché si needs2FA -->
+        <input type="text" [(ngModel)]="otp" placeholder="Code à 6 chiffres" />
+        <button (click)="verifyOtp()">Valider OTP</button>
+      </div>
+        </mat-card-content>
+
+    </mat-card>
+
+</div>

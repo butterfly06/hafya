@@ -1,0 +1,12 @@
+<div class="geo-container">
+  <h2>📍 Géolocalisation Dynamique</h2>
+<div id="map" style="height: 400px;"></div>
+  <div *ngIf="latitude && longitude; else loading">
+    <p><strong>Latitude:</strong> {{ latitude }}</p>
+    <p><strong>Longitude:</strong> {{ longitude }}</p>
+  </div>
+
+  <ng-template #loading>
+    <p>{{ errorMessage || 'Récupération de la position en cours...' }}</p>
+  </ng-template>
+</div>

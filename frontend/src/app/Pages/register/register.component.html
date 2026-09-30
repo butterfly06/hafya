@@ -1,0 +1,91 @@
+<div class="container">
+<mat-card>
+<!-- <form (ngSubmit)="onSubmit()">
+<h2>Inscription Praticien</h2>
+<h3>Selectionnez votre sexe</h3>
+<label>
+  <input type="radio" name="gender" [(ngModel)]="praticien.sexe" value="Homme" /> Homme
+</label>
+
+<label>
+  <input type="radio" name="gender" [(ngModel)]="praticien.sexe" value="Femme" /> Femme
+</label>
+
+<p>Selected (Radio): {{ praticien.sexe }}</p>
+
+  <mat-form-field>
+    <input matInput placeholder="Firstname" [(ngModel)]="praticien.firstname" name="firstname">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Lastname" [(ngModel)]="praticien.lastname" name="lastname">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="praticien.email" name="email">
+  </mat-form-field>
+
+ <mat-form-field>
+    <input matInput type="date" placeholder="Date de naissane" date-format="dd-mm-yyyy" [(ngModel)]="praticien.date_naissance" name="date_naissance">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Telephone" [(ngModel)]="praticien.telephone" name="telephone">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="adresse cabinet" [(ngModel)]="praticien.adresse_cabinet" name="adresse">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Password" [(ngModel)]="praticien.password" name="password">
+  </mat-form-field>
+
+  <input type="file" (change)="onImageSelected($event)" />
+  <img *ngIf="praticien.image" [src]="praticien.image" width="200" />
+
+  <button mat-raised-button color="primary" type="submit">Register</button>
+</form> -->
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2>Inscription Praticien</h2>
+<h3>Selectionnez votre sexe</h3>
+<label>
+  <input formControlName="sexe"  type="radio"   value="Homme" /> Homme
+</label>
+
+<label>
+  <input formControlName="sexe" type="radio"  value="Femme" /> Femme
+</label>
+
+<!-- 🔹 Upload image -->
+  <div class="upload-section">
+    <label for="image">Télécharger une Photo de profil :</label>
+    <input
+      type="file"
+      id="image"
+      (change)="onFileChange($event)"
+      accept="image/*"
+    />
+  </div>
+
+  <!-- 🔹 Afficher un aperçu -->
+  <div *ngIf="imagePreview">
+    <img [src]="imagePreview" alt="aperçu" width="120" height="120" style="border-radius:50%;margin-top:10px;">
+  </div>
+
+  <input formControlName="firstname" placeholder="Prénom" />
+  <input formControlName="lastname" placeholder="Nom" />
+  <input formControlName="email" placeholder="Email" type="email" />
+  <input formControlName="date_naissance" placeholder="Date de naissance" type="date" />
+  <input formControlName="telephone" placeholder="Téléphone" />
+  <input formControlName="adresse" placeholder="Adresse" />
+  <input formControlName="password" placeholder="Mot de passe" type="password" />
+ 
+  <button type="submit">S'inscrire</button>
+</form>
+<p *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</p>
+
+ </mat-card>
+
+</div>
